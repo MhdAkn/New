@@ -15,14 +15,14 @@
 
             <fieldset  class="border p-2">
 
-                <legend  class="float-none w-auto p-3"><h4 class="text-primary" style="text-align:center" >Information financière de l'entreprise</h4></legend>
+                <legend  class="float-none w-auto p-3"><h5 class="text-primary" style="text-align:center" >Information financière de l'entreprise</h5></legend>
 
                 <fieldset class="border p-2">
-                    <legend  class="float-none w-auto p-3"><h4 class="text-primary" style="text-align:center" >Equipes dirigeantes</h4></legend>
-                    <div class="row gx-3 gy-2 align-items-center">
-                        <div class="col-sm-3 mb-3">
+                    <legend  class="float-none w-auto p-3"><h5 class="text-primary" style="text-align:center" >Equipes dirigeantes</h5></legend>
+                    <div class="row  d-flex flew-wrap justify-content-center">
+                        <div class="col-sm-3 mb-3 ">
                              <div class="input-group">
-                                   <span class="input-group-text bg-white" style="border-right: none;" id="basic-addon1">
+                                   <span class="input-group-text bg-white" id="basic-addon1" style="border-right: none;">
                                         <img src="../assets/person-square.svg" alt="">,
                                     </span>
                                 <input class="form-control" id="nom" type="text" placeholder="Nom">
@@ -45,13 +45,13 @@
                         </div>
                         <div class="col-sm-3 mb-3">
                              <div class="input-group">
-                                   <span class="input-group-text bg-white" style="border-right: none;" id="basic-addon1">
+                                   <span class="input-group-text bg-white" id="basic-addon1" style="border-right: none;">
                                         <img src="../assets/Link.svg" alt="">
                                     </span>
                                 <input class="form-control" id="url" type="text" placeholder="Url">
                             </div>
                         </div>
-                        <div class="col-sm-3 mb-3">
+                        <div class="col-sm-1 mb-3">
                             <div class="input-group">
                                     <span class=" bg-white" id="basic-addon1">
                                         <img src="../assets/Add circle.svg" alt="">
@@ -62,11 +62,11 @@
                     </div>
                 </fieldset>
                 <fieldset class="border p-2">
-                    <legend  class="float-none w-auto p-3"><h4 class="text-primary" style="text-align:center" >Investisseurs</h4></legend>
-                    <div class="row gx-3 gy-2 align-items-center">
+                    <legend  class="float-none w-auto p-3"><h5 class="text-primary" style="text-align:center" >Investisseurs</h5></legend>
+                    <div class="row   d-flex flew-wrap justify-content-center">
                         <div class="col-sm-3 mb-3">
                              <div class="input-group">
-                                 <span class="input-group-text bg-white" style="border-right: none;" id="basic-addon1">
+                                 <span class="input-group-text bg-white" id="basic-addon1" style="border-right: none;">
                                     <img src="../assets/person-square.svg" alt="">
                                 </span>
                                 <input class="form-control" id="nom" type="text" placeholder="Nom">
@@ -89,13 +89,13 @@
                         </div>
                         <div class="col-sm-3 mb-3">
                              <div class="input-group">
-                                <span class="input-group-text bg-white" style="border-right: none;" id="basic-addon1">
+                                <span class="input-group-text bg-white" id="basic-addon1" style="border-right: none;">
                                     <img src="../assets/Link.svg" alt="">
                                 </span>
                                 <input class="form-control" id="url" type="text" placeholder="Url">
                             </div>
                         </div>
-                        <div class="col-sm-3 mb-3">
+                        <div class="col-sm-1 mb-3">
                             <div class="input-group">
                                 <span class=" bg-white" id="basic-addon1">
                                     <img src="../assets/Add circle.svg" alt="">
@@ -106,8 +106,8 @@
                     </div>
                 </fieldset>
                 <fieldset class="border p-2">
-                    <legend  class="float-none w-auto p-3"><h4 class="text-primary" style="text-align:center" >Chiffres d'affaires</h4></legend>
-                    <div class="row gx-3 gy-2 align-items-center">
+                    <legend  class="float-none w-auto p-3"><h5 class="text-primary" style="text-align:center" >Chiffres d'affaires</h5></legend>
+                    <div class="row   d-flex flew-wrap justify-content-center">
                         <div class="col-sm-4 mb-4">
                             <div class="input-group">
                                     <span class="input-group-text bg-white" id="basic-addon1">
@@ -124,7 +124,7 @@
                                 <input class="form-control" id="montant" type="text" placeholder="Montant">
                             </div>
                         </div>
-                         <div class="col-sm-3 mb-3">
+                         <div class="col-sm-1 mb-3">
                             <div class="input-group">
                                 <span class=" bg-white" id="basic-addon1">
                                     <img src="../assets/Add circle.svg" alt="">
@@ -134,8 +134,8 @@
                     </div>
                 </fieldset>
                  <fieldset class="border p-2">
-                    <legend  class="float-none w-auto p-3"><h4 class="text-primary" style="text-align:center" >Levés de fonds</h4></legend>
-                    <div class="row gx-3 gy-2 align-items-center">
+                    <legend  class="float-none w-auto p-3"><h5 class="text-primary" style="text-align:center" >Levés de fonds</h5></legend>
+                    <div class="row   d-flex flew-wrap justify-content-center">
                         <div class="col-sm-4 mb-4">
                             <div class="input-group">
                                     <span class="input-group-text bg-white" id="basic-addon1">
@@ -152,7 +152,7 @@
                                 <input class="form-control" id="montant" type="text" placeholder="Montant">
                             </div>
                         </div>
-                        <div class="col-sm-3 mb-3">
+                        <div class="col-sm-1 mb-3">
                             <div class="input-group">
                                 <span class=" bg-white" id="basic-addon1">
                                     <img src="../assets/Add circle.svg" alt="">
@@ -161,7 +161,7 @@
                         </div>
                     </div>
                 </fieldset>
-                    <div style="margin-left: 4px" class="row gx-3 gy-2 align-items-center">
+                    <div class="row gx-3 gy-2 align-items-center" style="margin-left: 4px">
                         <div class="col-sm-2 mb-4">
                             <div class="input-group">
                                     <span class="input-group-text bg-white" id="basic-addon1">
@@ -215,6 +215,9 @@ h3{
 }
 .round {
   border-radius: 70%;
+}
+input{
+    border-left: none;
 }
 
 </style>

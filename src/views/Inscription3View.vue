@@ -13,7 +13,7 @@
    
             <form row g-3> 
                 <fieldset class="border p-2">
-                    <legend  class="float-none w-auto p-3"><h4 class="text-primary" style="text-align:center" >Information de l'entreprise</h4></legend>
+                    <legend  class="float-none w-auto p-3"><h5 class="text-primary" style="text-align:center" >Information de l'entreprise</h5></legend>
                     <div class="row gx-3 gy-2 align-items-center">
                         <div class="col-sm-6 mb-3">
                              <div class="input-group">
@@ -46,7 +46,7 @@
                     </div>
                 </fieldset>
                 <fieldset class="border p-2">
-                    <legend  class="float-none w-auto p-3"><h4 class="text-primary" style="text-align:center" >Information réseaux sociaux de l'entreprise</h4></legend>
+                    <legend  class="float-none w-auto p-3"><h5 class="text-primary" style="text-align:center" >Information réseaux sociaux de l'entreprise</h5></legend>
                     <div class="row gx-3 gy-2 align-items-center">
                         <div class="col-sm-6 mb-3">
                             <div class="input-group">
