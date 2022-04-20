@@ -11,7 +11,7 @@
      </nav>
       <h5 class="text-primary" style="text-align:center; margin-top:25px" ><b> INSCRIPTION </b></h5>
    
-            <form row g-3> 
+            <form row g-3 method="POST" @submit.prevent="submitHandler" > 
 
             <fieldset  class="border p-2">
 
@@ -19,13 +19,13 @@
 
                 <fieldset class="border p-2">
                     <legend  class="float-none w-auto p-3"><h5 class="text-primary" style="text-align:center" >Equipes dirigeantes</h5></legend>
-                    <div class="row  d-flex flew-wrap justify-content-center">
+                    <div class="row  d-flex flew-wrap justify-content-center"  >
                         <div class="col-sm-3 mb-3 ">
                              <div class="input-group">
                                    <span class="input-group-text bg-white" id="basic-addon1" style="border-right: none;">
                                         <img src="../assets/person-square.svg" alt="">,
                                     </span>
-                                <input class="form-control" id="nom" type="text" placeholder="Nom">
+                                <input class="form-control" id="nom" type="text" placeholder="Nom" required>
                             </div>
                         </div>
                         <div class="col-sm-3 mb-3">
@@ -33,27 +33,25 @@
                                     <span class="input-group-text bg-white" id="basic-addon1">
                                         <img src="../assets/Place Marker.svg" alt="">
                                     </span>
-                                    <select class="form-select" id="autoSizingSelect">
+                                    <select class="form-select" id="teamPosition" required >
                                         <option selected>Position</option>
-                                        <option value="1">CEO</option>
-                                        <option value="2">CTO</option>
-                                        <option value="3">COO</option>
-                                        <option value="4">CEO</option>
-
+                                        <option value="CEO">CEO</option>
+                                        <option value="CTO">CTO</option>
+                                        <option value="COO">COO</option>
                                     </select>
                             </div>
                         </div>
                         <div class="col-sm-3 mb-3">
                              <div class="input-group">
-                                   <span class="input-group-text bg-white" id="basic-addon1" style="border-right: none;">
+                                   <span class="input-group-text bg-white" id="basic-addon1" style="border-right: none;" >
                                         <img src="../assets/Link.svg" alt="">
                                     </span>
-                                <input class="form-control" id="url" type="text" placeholder="Url">
+                                <input class="form-control" id="url" type="url" placeholder="Url" required>
                             </div>
                         </div>
                         <div class="col-sm-1 mb-3">
                             <div class="input-group">
-                                    <span class=" bg-white" id="basic-addon1">
+                                    <span class=" bg-white" id="basic-addon1" @click="addTeam">
                                         <img src="../assets/Add circle.svg" alt="">
                                     </span>
                             </div>
@@ -69,7 +67,7 @@
                                  <span class="input-group-text bg-white" id="basic-addon1" style="border-right: none;">
                                     <img src="../assets/person-square.svg" alt="">
                                 </span>
-                                <input class="form-control" id="nom" type="text" placeholder="Nom">
+                                <input class="form-control" id="nomI" type="text" placeholder="Nom" required>
                             </div>
                         </div>
                         <div class="col-sm-3 mb-3">
@@ -77,12 +75,11 @@
                                 <span class="input-group-text bg-white" id="basic-addon1">
                                     <img src="../assets/Place Marker.svg" alt="">
                                 </span>
-                                    <select class="form-select" id="autoSizingSelect">
+                                    <select class="form-select" id="posI" placeholder="Position" required>
                                         <option selected>Position</option>
-                                        <option value="1">CEO</option>
-                                        <option value="2">CTO</option>
-                                        <option value="3">COO</option>
-                                        <option value="4">CEO</option>
+                                        <option value="CEO">CEO</option>
+                                        <option value="CTO">CTO</option>
+                                        <option value="COO">COO</option>
 
                                     </select>
                             </div>
@@ -92,13 +89,13 @@
                                 <span class="input-group-text bg-white" id="basic-addon1" style="border-right: none;">
                                     <img src="../assets/Link.svg" alt="">
                                 </span>
-                                <input class="form-control" id="url" type="text" placeholder="Url">
+                                <input class="form-control" id="urlI" type="url" placeholder="Url" required >
                             </div>
                         </div>
                         <div class="col-sm-1 mb-3">
                             <div class="input-group">
-                                <span class=" bg-white" id="basic-addon1">
-                                    <img src="../assets/Add circle.svg" alt="">
+                                <span class=" bg-white" id="basic-addon1" @click="addInvestissor">
+                                    <img src="../assets/Add circle.svg" alt="" >
                                 </span>
                             </div>
                         </div>
@@ -113,7 +110,7 @@
                                     <span class="input-group-text bg-white" id="basic-addon1">
                                         <img src="../assets/table.svg" alt="">
                                     </span>
-                                <input class="form-control" id="annee" type="text" placeholder="Année">
+                                <input class="form-control" id="anneeCa" type="date" placeholder="Année" required>
                             </div>
                         </div>
                         <div class="col-sm-5 mb-4">
@@ -121,13 +118,13 @@
                                     <span class="input-group-text bg-white" id="basic-addon1">
                                         <img src="../assets/Table of Content.svg" alt="">
                                     </span>
-                                <input class="form-control" id="montant" type="text" placeholder="Montant">
+                                <input class="form-control" id="montantCa" type="text" placeholder="Montant"  v-model="chiffre_affaire.montant" required>
                             </div>
                         </div>
                          <div class="col-sm-1 mb-3">
                             <div class="input-group">
-                                <span class=" bg-white" id="basic-addon1">
-                                    <img src="../assets/Add circle.svg" alt="">
+                                <span class=" bg-white" id="basic-addon1" @click="addCa">
+                                    <img src="../assets/Add circle.svg" alt="" >
                                 </span>
                             </div>
                         </div>
@@ -141,7 +138,7 @@
                                     <span class="input-group-text bg-white" id="basic-addon1">
                                         <img src="../assets/table.svg" alt="">
                                     </span>
-                                <input class="form-control" id="annee" type="text" placeholder="Année">
+                                <input class="form-control" id="anneelf" type="date" placeholder="Année" required>
                             </div>
                         </div>
                         <div class="col-sm-5 mb-4">
@@ -149,12 +146,12 @@
                                     <span class="input-group-text bg-white" id="basic-addon1">
                                         <img src="../assets/Table of Content.svg" alt="">
                                     </span>
-                                <input class="form-control" id="montant" type="text" placeholder="Montant">
+                                <input class="form-control" id="montantlf" type="text" placeholder="Montant" required>
                             </div>
                         </div>
                         <div class="col-sm-1 mb-3">
                             <div class="input-group">
-                                <span class=" bg-white" id="basic-addon1">
+                                <span class=" bg-white" id="basic-addon1" @click="addLf">
                                     <img src="../assets/Add circle.svg" alt="">
                                 </span>
                             </div>
@@ -167,7 +164,7 @@
                                     <span class="input-group-text bg-white" id="basic-addon1">
                                         <img src="../assets/dollar.svg" alt="">
                                     </span>
-                                <input class="form-control" id="capital" type="text" placeholder="Capital Social">
+                                <input class="form-control" id="capital" type="text" placeholder="Capital Social" required>
                             </div>
                         </div>
                     </div>
@@ -175,17 +172,84 @@
                 <br><br><br>
                  <div class="position-relative">
                     <div class="position-absolute bottom-0 start-0"><router-link  class="btn btn-primary previous pull-left" to="/inscription1">&#8249; Précédent</router-link></div>
-                    <div class="position-absolute bottom-0 end-0"><router-link  class="btn btn-primary next pull-right" to="/inscription3">Suivant &#8250;</router-link></div>
+                <div class="position-absolute bottom-0 end-0"><button class="btn btn-primary next pull-right" type="Submit">Suivant &#8250;</button></div>
                 </div>
             </form>
+
+            <div>
+</div>
   </div>
   
 </template>
-<script >
-// @ is an alias to /src
+<script>
 
-export default {
-  
+    import { mapState} from 'vuex'
+    export default 
+    {
+        name:'Inscription2View',
+        computed:
+        {
+            ...mapState(['startup'])
+                      
+        },
+        data()
+        {
+            return {
+
+            chiffre_affaire:
+            {
+                annee: null,
+                montant: null
+            },
+            levee_fonds:
+            {
+                annee: null,
+                montant: null
+            }
+                  }
+        },
+        methods:
+        { 
+            addTeam()
+            {
+                let nomInput = document.getElementById("nom") 
+                let urlInput = document.getElementById("url")
+                let positionInput = document.getElementById("teamPosition").value
+                
+                this.startup.list_team.push({ name: nomInput.value, position: positionInput, url: urlInput.value})
+                alert("Enrégistrement reussi")
+            },
+            addInvestissor()
+            {
+                let nomInput = document.getElementById("nomI") 
+                let urlInput = document.getElementById("urlI")
+                let positionInput = document.getElementById("posI").value
+                
+                this.startup.list_investissors.push({ name: nomInput.value, position: positionInput, url: urlInput.value})
+                alert("Enrégistrement reussi")
+            },
+            addCa()
+            {
+                let a = document.getElementById("anneeCa") 
+                let m = document.getElementById("montantCa")
+                
+                this.startup.turnover.push({ annee: a.value, montant: m.value})
+                alert("Enrégistrement reussi")
+            },
+            addLf()
+            {
+                let a = document.getElementById("anneelf") 
+                let m = document.getElementById("montantlf")
+                
+                this.startup.fundings.details.push({ annee: a.value, montant: m.value})
+                alert("Enrégistrement reussi")
+            },
+            submitHandler()
+            {
+                console.warn(this.startup) 
+                this.$router.push("inscription3")
+            }
+        }
 }
 </script>
 <style scoped>
@@ -216,7 +280,7 @@ h3{
 .round {
   border-radius: 70%;
 }
-input{
+input,select{
     border-left: none;
 }
 
